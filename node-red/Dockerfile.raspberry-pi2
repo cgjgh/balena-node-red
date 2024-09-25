@@ -10,6 +10,8 @@ COPY ./app/package-lock.json package-lock.json
 RUN JOBS=MAX npm install -g --production --unsafe-perm \
       node-red \
       node-red-contrib-balena \
+      @node-red-contrib-themes/theme-collection \
+      @flowfuse/node-red-dashboard \
     && JOBS=MAX npm install --unsafe-perm --production && npm cache clean --force
 
 ###
